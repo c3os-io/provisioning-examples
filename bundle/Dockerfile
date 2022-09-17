@@ -1,4 +1,4 @@
-ARG VERSION=
+ARG VERSION=v0.0.0-a5423d8
 FROM alpine as build
 # Install a binary
 RUN wget https://github.com/ipfs/kubo/releases/download/v0.15.0/kubo_v0.15.0_linux-amd64.tar.gz -O kubo.tar.gz
