@@ -1,11 +1,11 @@
-ARG VERSION=v1.0.0-rc1-ks3v1.23.9+ks1
+ARG VERSION=v0.0.0-dfff908
 FROM alpine as build
 # Install a binary
 RUN wget https://github.com/ipfs/kubo/releases/download/v0.15.0/kubo_v0.15.0_linux-amd64.tar.gz -O kubo.tar.gz
 RUN tar xvf kubo.tar.gz
 RUN mv kubo/ipfs /usr/bin/ipfs
 RUN mkdir -p /usr/lib/extension-release.d/
-RUN echo ID=c3os > /usr/lib/extension-release.d/extension-release.kubo
+RUN echo ID=kairos > /usr/lib/extension-release.d/extension-release.kubo
 RUN echo VERSION_ID=$VERSION >> /usr/lib/extension-release.d/extension-release.kubo
 
 
